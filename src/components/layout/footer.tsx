@@ -18,14 +18,14 @@ const Footer = () => {
           <h3 className="text-center text-4xl font-bold text-primary">
             Schedule a Meeting with Our Experts
           </h3>
-          <p className="mt-2 text-center text-xl text-primary">
+          <p className="mt-2 text-center text-2xl text-primary">
             Share a brief about your project and get a guaranteed response
             within 24 hours.
           </p>
           <Link
             className={cn(
               buttonVariants({ size: "lg" }),
-              "mx-auto mt-6 rounded-full font-medium",
+              "mx-auto mt-4 rounded-full font-medium",
             )}
             href="/contact"
           >

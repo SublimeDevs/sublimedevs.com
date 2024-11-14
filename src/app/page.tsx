@@ -1,4 +1,5 @@
 import HomeHero from "@/components/home/home-hero";
+import HomeRatings from "@/components/home/home-ratings";
 import HomeTechnologies from "@/components/home/home-technologies";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
       <HomeHero />
       <HomeTechnologies />
+      <HomeRatings />
     </div>
   );
 };
