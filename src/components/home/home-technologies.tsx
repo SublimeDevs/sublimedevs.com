@@ -301,7 +301,7 @@ const technologies = [
 
 const HomeTechnologies = () => {
   return (
-    <div className="bg-background py-24">
+    <div className="border-b-2 border-primary bg-background py-24">
       <div className="container mx-auto">
         <h3 className="text-center text-5xl font-bold text-primary">
           Technologies we work with

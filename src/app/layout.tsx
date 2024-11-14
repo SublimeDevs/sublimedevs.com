@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "@/components/layout/footer";
 import Navigation from "@/components/layout/navigation";
 import { cn } from "@/lib/utils";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
       <body className={cn(fontSans.className, "bg-background antialiased")}>
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

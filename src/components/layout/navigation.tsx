@@ -80,7 +80,7 @@ const Navigation = () => {
           <Link
             className={cn(
               buttonVariants({ variant: "outline" }),
-              "rounded-full",
+              "hidden rounded-full sm:inline-flex",
             )}
             href="/contact"
           >
