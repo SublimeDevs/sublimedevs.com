@@ -12,6 +12,7 @@ import {
   SiCanva,
   SiDigitalocean,
   SiDocker,
+  SiExpress,
   SiFigma,
   SiFirebase,
   SiFlutter,
@@ -30,6 +31,7 @@ import {
   SiMongodb,
   SiMysql,
   SiNestjs,
+  SiNextdotjs,
   SiNodedotjs,
   SiOpenai,
   SiPhp,
@@ -43,7 +45,9 @@ import {
   SiSupabase,
   SiSvelte,
   SiSwift,
+  SiTailwindcss,
   SiTerraform,
+  SiTypescript,
   SiVercel,
   SiVuedotjs,
 } from "react-icons/si";
@@ -77,6 +81,18 @@ const technologies = [
       {
         title: "React",
         icon: <SiReact className="h-12 w-12 text-primary" />,
+      },
+      {
+        title: "Next.js",
+        icon: <SiNextdotjs className="h-12 w-12 text-primary" />,
+      },
+      {
+        title: "Tailwind CSS",
+        icon: <SiTailwindcss className="h-12 w-12 text-primary" />,
+      },
+      {
+        title: "Typescript",
+        icon: <SiTypescript className="h-12 w-12 text-primary" />,
       },
       {
         title: "Vue",
@@ -116,8 +132,12 @@ const technologies = [
         icon: <SiLaravel className="h-12 w-12 text-primary" />,
       },
       {
-        title: "Node",
+        title: "Node.js",
         icon: <SiNodedotjs className="h-12 w-12 text-primary" />,
+      },
+      {
+        title: "Express.js",
+        icon: <SiExpress className="h-12 w-12 text-primary" />,
       },
       {
         title: "Nest",
