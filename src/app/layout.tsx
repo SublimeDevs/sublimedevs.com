@@ -6,23 +6,28 @@ import { cn } from "@/lib/utils";
 const fontSans = localFont({
   src: [
     {
-      path: "../../public/fonts/Proxima-Nova-Thin.woff2",
+      path: "../../public/fonts/MabryPro-Light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Proxima-Nova-Regular.woff2",
+      path: "../../public/fonts/MabryPro-Regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Proxima-Nova-SemiBold.woff2",
+      path: "../../public/fonts/MabryPro-Medium.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/Proxima-Nova-Bold.woff2",
+      path: "../../public/fonts/MabryPro-Bold.woff2",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/MabryPro-Black.woff2",
+      weight: "900",
       style: "normal",
     },
   ],
