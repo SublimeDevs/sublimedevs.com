@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { SiSahibinden } from "react-icons/si";
 import { RegisterForm } from "@/components/auth/register-form";
 import { auth } from "@/lib/auth";
-import { redirect } from "next/navigation";
 
 export default async function Register() {
   const session = await auth();

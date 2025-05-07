@@ -3,8 +3,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { LuLoader } from "react-icons/lu";
+import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -16,9 +19,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { LoginSchema, loginSchema } from "@/lib/validations/auth-validations";
-import { useState } from "react";
-import { signIn } from "next-auth/react";
-import { toast } from "sonner";
 
 export function LoginForm() {
   const form = useForm<LoginSchema>({
@@ -105,7 +105,7 @@ export function LoginForm() {
           </Button>
         </div>
         <div className="text-center text-sm">
-          Don't have an account?{" "}
+          Don&apos;t have an account?{" "}
           <Link className="underline underline-offset-4" href="/register">
             Sign up
           </Link>

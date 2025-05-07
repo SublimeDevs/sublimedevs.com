@@ -25,7 +25,11 @@ export const POST = async (req: NextRequest) => {
     );
   }
 
-  const username = slugify(`${name}-${nanoid(5)}`);
+  const username = slugify(`${name}-${nanoid(5)}`, {
+    lower: true,
+    strict: true,
+    trim: true,
+  });
   const hashedPassword = await hashPassword(password);
 
   const token = nanoid(32);
