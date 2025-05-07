@@ -1,8 +1,8 @@
 "use client";
 
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import { LuChevronDown } from "react-icons/lu";
 import * as React from "react";
+import { LuChevronDown } from "react-icons/lu";
 import { cn } from "@/lib/utils";
 
 function Accordion({

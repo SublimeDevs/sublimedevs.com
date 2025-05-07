@@ -6,8 +6,10 @@ export const users = pgTable("users", {
     .primaryKey()
     .$defaultFn(() => randomUUID()),
   name: varchar("name", { length: 255 }).notNull(),
+  username: varchar("username", { length: 255 }).notNull().unique(),
   email: varchar("email", { length: 255 }).notNull().unique(),
   password: varchar("password", { length: 255 }).notNull(),
+  emailVerified: timestamp("email_verified", { mode: "date" }),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   updatedAt: timestamp("updated_at")
     .notNull()
@@ -27,7 +29,8 @@ export const tokens = pgTable("tokens", {
   userId: uuid("user_id").references(() => users.id),
   token: varchar("token", { length: 255 }).notNull(),
   type: tokenTypes("type").notNull(),
-  expiresAt: timestamp("expires_at").notNull(),
+  expiresAt: timestamp("expires_at"),
 });
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default { users, tokens };

@@ -1,8 +1,8 @@
 "use client";
 
-import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import * as React from "react";
 import { DayPicker } from "react-day-picker";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 

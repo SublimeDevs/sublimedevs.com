@@ -1,9 +1,9 @@
 import { eq } from "drizzle-orm";
-import { db } from "@/db";
-import { users } from "@/db/schema";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { verifyPassword } from "./utils";
+import { db } from "@/db";
+import { users } from "@/db/schema";
 
 export const { handlers, auth } = NextAuth({
   session: {
