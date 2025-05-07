@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SiSahibinden } from "react-icons/si";
-import { RegisterForm } from "@/components/auth/register-form";
+import { LoginForm } from "@/components/auth/login-form";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
-export default async function Register() {
+export default async function Login() {
   const session = await auth();
   if (session?.user) {
     redirect("/");
@@ -24,7 +24,7 @@ export default async function Register() {
         </div>
         <div className="flex flex-1 items-center justify-center">
           <div className="w-full max-w-xs">
-            <RegisterForm />
+            <LoginForm />
           </div>
         </div>
       </div>
