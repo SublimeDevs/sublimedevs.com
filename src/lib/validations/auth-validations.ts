@@ -14,3 +14,9 @@ export const loginSchema = z.object({
 });
 
 export type LoginSchema = z.infer<typeof loginSchema>;
+
+export const verifyEmailSchema = z.object({
+  token: z.string().min(32).max(32),
+});
+
+export type VerifyEmailSchema = z.infer<typeof verifyEmailSchema>;

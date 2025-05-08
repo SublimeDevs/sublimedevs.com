@@ -26,7 +26,9 @@ export const tokens = pgTable("tokens", {
   id: uuid("id")
     .primaryKey()
     .$defaultFn(() => randomUUID()),
-  userId: uuid("user_id").references(() => users.id),
+  userId: uuid("user_id")
+    .references(() => users.id)
+    .notNull(),
   token: varchar("token", { length: 255 }).notNull(),
   type: tokenTypes("type").notNull(),
   expiresAt: timestamp("expires_at"),
