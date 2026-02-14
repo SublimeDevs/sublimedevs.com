@@ -42,7 +42,14 @@ export const resetPasswordSchema = z
     path: ["confirmPassword"],
   });
 
+export const selectRoleSchema = z.object({
+  role: z.enum(["candidate", "recruiter"], {
+    error: "Please select a role",
+  }),
+});
+
 export type LoginInput = z.infer<typeof loginSchema>;
 export type RegisterInput = z.infer<typeof registerSchema>;
 export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
 export type ResetPasswordInput = z.infer<typeof resetPasswordSchema>;
+export type SelectRoleInput = z.infer<typeof selectRoleSchema>;
