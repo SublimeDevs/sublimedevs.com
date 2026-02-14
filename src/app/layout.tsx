@@ -1,16 +1,45 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { IBM_Plex_Sans as FontSans } from "next/font/google";
+import localFont from "next/font/local";
 
 import { QueryProvider } from "@/components/providers/query-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
-const fontSans = FontSans({
-  variable: "--font-sans",
-  subsets: ["latin"],
+const fontSans = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SublimeDevsSans-latin.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/SublimeDevsSansItalic-latin.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-sublimedevs-sans",
+  display: "swap",
+});
+
+const fontMono = localFont({
+  src: [
+    {
+      path: "../../public/fonts/SublimeDevsMono-latin.woff2",
+      weight: "100 800",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/SublimeDevsMonoItalic-latin.woff2",
+      weight: "100 800",
+      style: "italic",
+    },
+  ],
+  variable: "--font-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +60,8 @@ export default function RootLayout({
       <body
         className={cn(
           "bg-background min-h-screen font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
+          fontMono.variable
         )}
       >
         <QueryProvider>
