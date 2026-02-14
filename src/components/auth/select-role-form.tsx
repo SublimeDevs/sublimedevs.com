@@ -59,8 +59,18 @@ export function SelectRoleForm({
     selectRole(
       { role: values.role },
       {
-        onSuccess: () => {
-          router.replace("/");
+        onSuccess: (data) => {
+          if (!data?.user) {
+            router.replace("/");
+            return;
+          }
+          if (data.user.role === "candidate") {
+            router.replace(`/${data.user.username}`);
+          } else if (data.user.role === "recruiter") {
+            router.replace("/app");
+          } else {
+            router.replace("/");
+          }
         },
       }
     );
