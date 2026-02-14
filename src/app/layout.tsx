@@ -1,17 +1,16 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { IBM_Plex_Sans as FontSans } from "next/font/google";
 
 import { QueryProvider } from "@/components/providers/query-provider";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
-const fontSans = Lato({
+const fontSans = FontSans({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "700", "900"],
 });
 
 export const metadata: Metadata = {
