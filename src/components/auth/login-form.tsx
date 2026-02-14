@@ -64,7 +64,7 @@ export function LoginForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="rounded-lg border shadow-none">
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome back</CardTitle>
           <CardDescription>Sign in with your email</CardDescription>
@@ -106,7 +106,7 @@ export function LoginForm({
                         </FormLabel>
                         <Link
                           href="/forgot-password"
-                          className="ml-auto text-sm underline-offset-4 hover:underline"
+                          className="text-muted-foreground ml-auto text-sm underline-offset-4 hover:underline"
                         >
                           Forgot your password?
                         </Link>
@@ -123,12 +123,17 @@ export function LoginForm({
                   )}
                 />
                 <Field>
-                  <Button type="submit" disabled={isLoading}>
-                    {isLoading ? <Spinner /> : "Login"}
+                  <Button type="submit" disabled={isLoading} className="w-full">
+                    {isLoading ? <Spinner /> : "Continue"}
                   </Button>
                   <FieldDescription className="text-center">
                     Don&apos;t have an account?{" "}
-                    <Link href="/register">Sign up</Link>
+                    <Link
+                      href="/register"
+                      className="text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                      Sign up
+                    </Link>
                   </FieldDescription>
                 </Field>
               </FieldGroup>
@@ -136,9 +141,16 @@ export function LoginForm({
           </Form>
         </CardContent>
       </Card>
-      <FieldDescription className="px-6 text-center">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+      <FieldDescription className="text-muted-foreground px-6 text-center text-sm">
+        By clicking continue, you agree to our{" "}
+        <a href="#" className="underline-offset-4 hover:underline">
+          Terms of Service
+        </a>{" "}
+        and{" "}
+        <a href="#" className="underline-offset-4 hover:underline">
+          Privacy Policy
+        </a>
+        .
       </FieldDescription>
     </div>
   );

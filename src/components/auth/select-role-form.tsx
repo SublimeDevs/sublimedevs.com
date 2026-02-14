@@ -68,7 +68,7 @@ export function SelectRoleForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="rounded-lg border shadow-none">
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Select your role</CardTitle>
           <CardDescription>
@@ -122,7 +122,7 @@ export function SelectRoleForm({
                   )}
                 />
                 <Field>
-                  <Button type="submit" disabled={isPending}>
+                  <Button type="submit" disabled={isPending} className="w-full">
                     {isPending ? <Spinner /> : "Continue"}
                   </Button>
                 </Field>

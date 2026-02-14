@@ -63,7 +63,7 @@ export function RegisterForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="rounded-lg border shadow-none">
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Create your account</CardTitle>
           <CardDescription>
@@ -154,11 +154,17 @@ export function RegisterForm({
                   )}
                 />
                 <Field>
-                  <Button type="submit" disabled={isLoading}>
-                    {isLoading ? <Spinner /> : "Create Account"}
+                  <Button type="submit" disabled={isLoading} className="w-full">
+                    {isLoading ? <Spinner /> : "Continue"}
                   </Button>
                   <FieldDescription className="text-center">
-                    Already have an account? <Link href="/login">Sign in</Link>
+                    Already have an account?{" "}
+                    <Link
+                      href="/login"
+                      className="text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                      Sign in
+                    </Link>
                   </FieldDescription>
                 </Field>
               </FieldGroup>
@@ -166,9 +172,16 @@ export function RegisterForm({
           </Form>
         </CardContent>
       </Card>
-      <FieldDescription className="px-6 text-center">
-        By clicking continue, you agree to our <a href="#">Terms of Service</a>{" "}
-        and <a href="#">Privacy Policy</a>.
+      <FieldDescription className="text-muted-foreground px-6 text-center text-sm">
+        By clicking continue, you agree to our{" "}
+        <a href="#" className="underline-offset-4 hover:underline">
+          Terms of Service
+        </a>{" "}
+        and{" "}
+        <a href="#" className="underline-offset-4 hover:underline">
+          Privacy Policy
+        </a>
+        .
       </FieldDescription>
     </div>
   );

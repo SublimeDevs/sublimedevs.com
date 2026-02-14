@@ -66,7 +66,7 @@ export function ForgotPasswordForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="rounded-lg border shadow-none">
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Forgot password</CardTitle>
           <CardDescription>
@@ -98,11 +98,17 @@ export function ForgotPasswordForm({
                   )}
                 />
                 <Field>
-                  <Button type="submit" disabled={isLoading}>
-                    {isLoading ? <Spinner /> : "Send reset link"}
+                  <Button type="submit" disabled={isLoading} className="w-full">
+                    {isLoading ? <Spinner /> : "Continue"}
                   </Button>
                   <FieldDescription className="text-center">
-                    Back to <Link href="/login">Login</Link>
+                    Back to{" "}
+                    <Link
+                      href="/login"
+                      className="text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                      Login
+                    </Link>
                   </FieldDescription>
                 </Field>
               </FieldGroup>

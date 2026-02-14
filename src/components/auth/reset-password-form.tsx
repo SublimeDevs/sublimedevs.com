@@ -69,7 +69,7 @@ export function ResetPasswordForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
-      <Card>
+      <Card className="rounded-lg border shadow-none">
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Reset password</CardTitle>
           <CardDescription>Enter your new password below</CardDescription>
@@ -132,15 +132,21 @@ export function ResetPasswordForm({
                   )}
                 />
                 <Field>
-                  <Button type="submit" disabled={form.formState.isSubmitting}>
-                    {form.formState.isSubmitting ? (
-                      <Spinner />
-                    ) : (
-                      "Reset password"
-                    )}
+                  <Button
+                    type="submit"
+                    disabled={form.formState.isSubmitting}
+                    className="w-full"
+                  >
+                    {form.formState.isSubmitting ? <Spinner /> : "Continue"}
                   </Button>
                   <FieldDescription className="text-center">
-                    Back to <Link href="/login">Login</Link>
+                    Back to{" "}
+                    <Link
+                      href="/login"
+                      className="text-muted-foreground underline-offset-4 hover:underline"
+                    >
+                      Login
+                    </Link>
                   </FieldDescription>
                 </Field>
               </FieldGroup>
