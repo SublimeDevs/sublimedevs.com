@@ -119,7 +119,7 @@ export function NavUser() {
             <DropdownMenuSeparator />
             <DropdownMenuGroup>
               <DropdownMenuItem asChild>
-                <Link href="/app/settings">
+                <Link href="/app/settings/profile">
                   <LuBadgeCheck className="size-4" />
                   Account
                 </Link>
